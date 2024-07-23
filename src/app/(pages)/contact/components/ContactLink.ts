@@ -16,7 +16,7 @@ export const contactLinks = [
   {
     Icon: FaLinkedin,
     IconName: "LinkedIn",
-    path: `https://www.linkedin.com/in/mr-zlaam-29b944296/`,
+    path: `https://www.linkedin.com/in/mr-siraj-29b944296/`,
   },
   {
     Icon: IoLogoGithub,
