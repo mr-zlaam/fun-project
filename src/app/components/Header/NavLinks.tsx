@@ -6,7 +6,7 @@ import Link from "next/link";
 import { Fragment, useState } from "react";
 function NavLinks() {
   const [isOpen, setOpen] = useState(false);
-  const isActive = useActivePath();
+  const isCurrentPathActive = useActivePath();
   const navLinks = [
     { id: 1, name: "Home", path: "/home", className: "select-none link_dark" },
     {
@@ -57,7 +57,7 @@ function NavLinks() {
               onClick={handleCloseMenu}
               href={data.path && data.path}
               className={cn(
-                isActive(data.path) ? "hidden" : "",
+                isCurrentPathActive(data.path) ? "hidden" : "",
                 "tracking-wide text-[1.2rem] ",
                 data.className
               )}
@@ -67,12 +67,10 @@ function NavLinks() {
           </Fragment>
         ))}
       </nav>
-      <div
-        className="md:hidden absolute top-7 z-[999] right-10"
-        onClick={() => setOpen(!isOpen)}
-      >
+      <div className="md:hidden absolute top-7 z-[999] right-10  rounded-full transition-[background] duration-300 active:bg-white/30">
         <Hamburger
           distance="sm"
+          onToggle={() => setOpen(!isOpen)}
           color="#fff"
           toggled={isOpen}
           toggle={setOpen}
