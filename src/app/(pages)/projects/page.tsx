@@ -11,10 +11,7 @@ function ProjectPage() {
           Some Projects
         </h1>
         <h2 className="w-fit mx-auto flex my-4 gap-2 items-center pointer ">
-          <Link
-            target="_blank"
-            href="https://drive.google.com/file/d/1WjNv4PsACYUfT3WpZHbuVWJUfc0uIBru/view?usp=drive_link"
-          >
+          <Link href="/pdf">
             <ArrowDown />
           </Link>
           <Link href={"/pdf"} className="hover:underline text-xl font-semibold">
