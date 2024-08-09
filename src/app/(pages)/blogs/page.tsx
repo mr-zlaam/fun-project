@@ -1,6 +1,7 @@
 import {} from "react";
 
 function BlogPage() {
+  //TODO: integration of git
   return (
     <>
       <section>BlogPage</section>
